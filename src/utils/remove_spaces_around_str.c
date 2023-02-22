@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   remove_space_around_str.c                          :+:      :+:    :+:   */
+/*   remove_spaces_around_str.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:36:40 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:36:42 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 14:57:35 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-include "minishell.h"
+#include "minishell.h"
 
 		/*	REMOVE_SPACES_AROUND_STR
 		**	------------
