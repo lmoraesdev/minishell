@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:30:45 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:30:46 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:31:48 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **	RETURN VALUES
 **	Return true if it is and false if not
 */
-static bool str_is_numeric(char *str)
+static bool	str_is_numeric(char *str)
 {
 	if (*str == '+' || *str == '-')
 		str++;
@@ -46,9 +46,9 @@ static bool str_is_numeric(char *str)
 **	RETURN VALUES
 **	-
 */
-void builtin_exit(t_cmdtable *head_table)
+void	builtin_exit(t_cmdtable *head_table)
 {
-	int status;
+	int	status;
 
 	status = 1;
 	ft_putendl_fd("exit", 1);
@@ -58,7 +58,7 @@ void builtin_exit(t_cmdtable *head_table)
 		{
 			g_data.status = 1;
 			put_msg_cmd("minishell", "exit", TOO_MANY_ARG, 2);
-			return;
+			return ;
 		}
 		if (str_is_numeric(head_table->word[1]))
 			status = ft_atoi(head_table->word[1]);
@@ -66,7 +66,7 @@ void builtin_exit(t_cmdtable *head_table)
 		{
 			g_data.status = 2;
 			put_msg_cmd("minishell", "exit", NUM_REQ, 2);
-			return;
+			return ;
 		}
 	}
 	g_data.status = status;

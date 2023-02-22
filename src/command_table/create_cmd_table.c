@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:35:33 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:35:35 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:37:43 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **	RETURN VALUES
 **	-
 */
-static void safe_cmd_v(t_cmd_value *cmd_value, t_counter index)
+static void	safe_cmd_v(t_cmd_value *cmd_value, t_counter index)
 {
 	if (index.word > 0)
 		cmd_value->word[index.word] = NULL;
@@ -42,7 +42,7 @@ static void safe_cmd_v(t_cmd_value *cmd_value, t_counter index)
 **	RETURN VALUES
 **	-
 */
-static void save_table_value(char ***table_v, char ***cmd, int *i, int *count)
+static void	save_table_value(char ***table_v, char ***cmd, int *i, int *count)
 {
 	if (is_var_expansion(**cmd))
 		(*table_v)[(*i)++] = ft_strdup(**cmd);
@@ -63,10 +63,10 @@ static void save_table_value(char ***table_v, char ***cmd, int *i, int *count)
 **	RETURN VALUES
 **	-
 */
-static void save_cmd_line(t_cmdtable **head_cmd, char ***cmd, t_counter *count)
+static void	save_cmd_line(t_cmdtable **head_cmd, char ***cmd, t_counter *count)
 {
-	t_cmd_value cmd_v;
-	t_counter index;
+	t_cmd_value	cmd_v;
+	t_counter		index;
 
 	init_cmd_value(&cmd_v, count);
 	init_count(&index);
@@ -74,10 +74,8 @@ static void save_cmd_line(t_cmdtable **head_cmd, char ***cmd, t_counter *count)
 	{
 		if (count->redirect > 0 && is_redirect(**cmd))
 		{
-			save_table_value(&cmd_v.redirect, cmd, &index.redirect,
-											 &count->redirect);
-			save_table_value(&cmd_v.redirect, cmd, &index.redirect,
-											 &count->redirect);
+			save_table_value(&cmd_v.redirect, cmd, &index.redirect, &count->redirect);
+			save_table_value(&cmd_v.redirect, cmd, &index.redirect, &count->redirect);
 		}
 		else if (count->word > 0)
 			save_table_value(&cmd_v.word, cmd, &index.word, &count->word);
@@ -96,7 +94,7 @@ static void save_cmd_line(t_cmdtable **head_cmd, char ***cmd, t_counter *count)
 **	RETURN VALUES
 **	Return true if token is redirect and false if word.
 */
-static bool count_word_and_redirect(int token, t_counter *count)
+static bool	count_word_and_redirect(int token, t_counter *count)
 {
 	if (token == INPUT || token == HEREDOC || token == TRUNC || token == APPEND)
 	{
@@ -118,11 +116,11 @@ static bool count_word_and_redirect(int token, t_counter *count)
 **	RETURN VALUES
 **	-
 */
-void create_cmd_table(void)
+void	create_cmd_table(void)
 {
-	t_counter count;
-	t_token *head_token;
-	char **cmd;
+	t_counter		count;
+	t_token			*head_token;
+	char				**cmd;
 
 	head_token = g_data.head_token;
 	init_count(&count);

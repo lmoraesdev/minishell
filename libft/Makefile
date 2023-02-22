@@ -14,6 +14,7 @@ SOURCES_BONUS	+=	ft_lstmap.c ft_lstsize.c
 OBJECTS = $(SOURCES:.c=.o)
 OBJECTS_BONUS	= 	$(SOURCES_BONUS:.c=.o)
 NAME = libft.a
+HEADER = -I includes
 
 CC = gcc
 AR = ar

@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:30:57 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:30:58 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:29:30 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 **	RETURN VALUES
 **	Return 1 if env exists and 0 if not.
 */
-static int change_env_var(char *var_name, char *var_value)
+static int	change_env_var(char *var_name, char *var_value)
 {
-	t_env *head_env;
+	t_env	*head_env;
 
 	head_env = g_data.head_env;
 	while (head_env != NULL)
@@ -50,9 +50,9 @@ static int change_env_var(char *var_name, char *var_value)
 **	RETURN VALUES
 **	Return 1 if env exists and 0 if not.
 */
-static int env_var_exists(char *var_name)
+static int	env_var_exists(char *var_name)
 {
-	t_env *head_env;
+	t_env	*head_env;
 
 	head_env = g_data.head_env;
 	while (head_env != NULL)
@@ -73,7 +73,7 @@ static int env_var_exists(char *var_name)
 **	RETURN VALUES
 **	Return 1 if success and 0 if failure.
 */
-static int save_only_name(char *variable)
+static int	save_only_name(char *variable)
 {
 	if (env_var_exists(variable))
 		return (1);
@@ -96,10 +96,10 @@ static int save_only_name(char *variable)
 **	RETURN VALUES
 **	Return 1 if success and 0 if failure.
 */
-int save_env_var(char *variable, int validate)
+int	save_env_var(char *variable, int validate)
 {
-	char **split_var;
-	char *env_value;
+	char	**split_var;
+	char	*env_value;
 
 	if (validate && *variable == '=')
 		return (export_error(variable));
@@ -129,11 +129,11 @@ int save_env_var(char *variable, int validate)
 **	RETURN VALUES
 **	-
 */
-void builtin_export(t_cmdtable *head_table)
+void	builtin_export(t_cmdtable *head_table)
 {
-	int i;
-	int result;
-	bool error;
+	int		i;
+	int		result;
+	bool	error;
 
 	i = 1;
 	error = false;

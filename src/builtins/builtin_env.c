@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:30:40 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:30:41 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:26:58 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	-
 */
-static void put_env(void)
+static void	put_env(void)
 {
-	t_env *head_env;
+	t_env	*head_env;
 
 	head_env = g_data.head_env;
 	while (head_env != NULL)
@@ -47,9 +47,9 @@ static void put_env(void)
 **	RETURN VALUES
 **	-
 */
-void builtin_env(t_cmdtable *head_table)
+void	builtin_env(t_cmdtable *head_table)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	if (head_table->word[i] && !is_equal_sign(head_table->word[i]))

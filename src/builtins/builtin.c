@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:31:19 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:31:22 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:30:32 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	Returns 1 in case of invalid redirection
 */
-int check_redirect_parent(t_cmdtable *head)
+int	check_redirect_parent(t_cmdtable *head)
 {
 	if (!head->err_file)
 		return (0);
@@ -50,7 +50,7 @@ int check_redirect_parent(t_cmdtable *head)
 **	RETURN VALUES
 **	Returns 1
 */
-int exec_builtin_parent(t_cmdtable *head_table, int builtin)
+int	exec_builtin_parent(t_cmdtable *head_table, int builtin)
 {
 	if (check_redirect_parent(head_table))
 		return (1);
@@ -80,7 +80,7 @@ int exec_builtin_parent(t_cmdtable *head_table, int builtin)
 **	RETURN VALUES
 **	Returns 1 if the command is a builtin, otherwise returns 0
 */
-int check_builtin(t_cmdtable *cmd_table)
+int	check_builtin(t_cmdtable *cmd_table)
 {
 	if (!cmd_table->word)
 		return (1);
@@ -104,7 +104,7 @@ int check_builtin(t_cmdtable *cmd_table)
 **	RETURN VALUES
 **	-
 */
-void exit_builtin_child(void)
+void	exit_builtin_child(void)
 {
 	clear_minishell();
 	free(g_data.cmd_path);
@@ -120,7 +120,7 @@ void exit_builtin_child(void)
 **	RETURN VALUES
 **	-
 */
-void exec_builtin_child(t_cmdtable *head_table)
+void	exec_builtin_child(t_cmdtable *head_table)
 {
 	if (strcmp_eq("echo", head_table->word[0]))
 	{

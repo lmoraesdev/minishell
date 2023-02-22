@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:30:51 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:30:52 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:27:58 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	-
 */
-void put_export(int fd)
+void	put_export(int fd)
 {
-	t_env *head_env;
+	t_env	*head_env;
 
 	head_env = g_data.head_env;
 	while (head_env != NULL)
@@ -54,7 +54,7 @@ void put_export(int fd)
 **	RETURN VALUES
 **	-
 */
-static void put_msg_builtin(char *builtin, char *eof, char *msg, int fd)
+static void	put_msg_builtin(char *builtin, char *eof, char *msg, int fd)
 {
 	ft_putstr_fd("minishell: ", fd);
 	ft_putstr_fd(builtin, fd);
@@ -62,7 +62,7 @@ static void put_msg_builtin(char *builtin, char *eof, char *msg, int fd)
 	ft_putstr_fd(eof, fd);
 	ft_putstr_fd("': ", fd);
 	ft_putendl_fd(msg, fd);
-	return;
+	return ;
 }
 
 /*	EXPORT_ERROR
@@ -74,7 +74,7 @@ static void put_msg_builtin(char *builtin, char *eof, char *msg, int fd)
 **	RETURN VALUES
 **	Return 0.
 */
-int export_error(char *variable)
+int	export_error(char *variable)
 {
 	put_msg_builtin("export", variable, NOT_VALID_ID, 2);
 	return (0);

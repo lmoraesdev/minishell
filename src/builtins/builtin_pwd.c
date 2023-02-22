@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:31:02 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:31:03 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:29:45 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	-
 */
-void builtin_pwd(void)
+void	builtin_pwd(void)
 {
-	char *str;
+	char	*str;
 
 	str = getcwd(NULL, 0);
 	printf("%s\n", str);

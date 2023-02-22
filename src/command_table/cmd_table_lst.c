@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:33:52 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:34:11 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:33:11 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	-
 */
-void free_cmd_lst(t_cmdtable **head_cmd)
+void	free_cmd_lst(t_cmdtable **head_cmd)
 {
-	t_cmdtable *temp;
+	t_cmdtable	*temp;
 
 	if (*head_cmd == NULL)
 		return;
@@ -50,10 +50,10 @@ void free_cmd_lst(t_cmdtable **head_cmd)
 **	RETURN VALUES
 **	-
 */
-void cmd_lst_add_front(t_cmdtable **head_cmd, t_cmd_value cmd_v)
+void	cmd_lst_add_front(t_cmdtable **head_cmd, t_cmd_value cmd_v)
 {
-	t_cmdtable *ptr;
-	t_cmdtable *temp;
+	t_cmdtable	*ptr;
+	t_cmdtable	*temp;
 
 	ptr = (t_cmdtable *)malloc(sizeof(t_cmdtable));
 	if (!ptr)

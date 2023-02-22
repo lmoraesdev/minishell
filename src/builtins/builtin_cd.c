@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:30:27 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:30:28 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:31:19 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **	RETURN VALUES
 **	-
 */
-void error_msg_cd(char *str, char *msg)
+void	error_msg_cd(char *str, char *msg)
 {
 	ft_putstr_fd("-minishell: ", 2);
 	ft_putstr_fd("cd: ", 2);
@@ -39,9 +39,9 @@ void error_msg_cd(char *str, char *msg)
 **	RETURN VALUES
 **	Returns 1 if the argument passed is a directory, otherwise returns 0
 */
-int check_is_dir_cd(t_cmdtable *cmd_table)
+int	check_is_dir_cd(t_cmdtable *cmd_table)
 {
-	DIR *dir;
+	DIR	*dir;
 
 	dir = opendir(cmd_table->word[1]);
 	if (!dir && access(cmd_table->word[1], F_OK) == -1)
@@ -67,12 +67,12 @@ int check_is_dir_cd(t_cmdtable *cmd_table)
 **	RETURN VALUES
 **	-
 */
-void change_dir(char *dir)
+void	change_dir(char *dir)
 {
-	char *new_pwd;
-	char cwd[1024];
-	char *old_pwd;
-	char old_cwd[1024];
+	char	*new_pwd;
+	char	cwd[1024];
+	char	*old_pwd;
+	char	old_cwd[1024];
 
 	old_pwd = ft_strcat("OLDPWD=", getcwd(old_cwd, 1024));
 	chdir(dir);
@@ -92,9 +92,9 @@ void change_dir(char *dir)
 **	RETURN VALUES
 **	-
 */
-void change_dir_old_pwd(void)
+void	change_dir_old_pwd(void)
 {
-	char *old_pwd;
+	char	*old_pwd;
 
 	old_pwd = search_env_value("OLDPWD");
 	if (old_pwd == NULL)
@@ -118,17 +118,18 @@ void change_dir_old_pwd(void)
 **	RETURN VALUES
 **	-
 */
-void builtin_cd(t_cmdtable *cmd_table)
+void	builtin_cd(t_cmdtable *cmd_table)
 {
 	if (cmd_table->word[1] && cmd_table->word[2])
 	{
 		ft_putstr_fd("-minishell: cd: too many arguments\n", 2);
 		g_data.status = 1;
-		return;
+		return ;
 	}
 	if (strcmp_eq(cmd_table->word[1], "-"))
 		change_dir_old_pwd();
-	else if (cmd_table->word[1] == NULL || strcmp_eq(cmd_table->word[1], "~") || strcmp_eq(cmd_table->word[1], "~/"))
+	else if (cmd_table->word[1] == NULL || strcmp_eq(cmd_table->word[1], "~")
+		|| strcmp_eq(cmd_table->word[1], "~/"))
 		change_dir(getenv("HOME"));
 	else if (check_is_dir_cd(cmd_table))
 		change_dir(cmd_table->word[1]);

@@ -6,13 +6,13 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:27:14 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:49:09 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:38:51 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-t_data g_data;
+t_data	g_data;
 
 /*	RUN_CMD
 **	------------
@@ -23,7 +23,7 @@ t_data g_data;
 **	RETURN VALUES
 **	-
 */
-void run_cmd(void)
+void	run_cmd(void)
 {
 	tokenizer();
 	if (g_data.splited_cmdl == NULL)
@@ -39,7 +39,7 @@ void run_cmd(void)
 		fork_it();
 }
 
-int main(int argc, char *argv[], char *envp[])
+int	main(int argc, char *argv[], char *envp[])
 {
 	(void)argv;
 	if (argc > 1)

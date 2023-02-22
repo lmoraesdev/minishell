@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:36:29 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:36:39 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:35:28 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **	RETURN VALUES
 **	-
 */
-static void open_less(t_cmdtable *head_cmd, char *filename)
+static void	open_less(t_cmdtable *head_cmd, char *filename)
 {
 	if (head_cmd->fdin > 2)
 		close(head_cmd->fdin);
@@ -45,7 +45,7 @@ static void open_less(t_cmdtable *head_cmd, char *filename)
 **	RETURN VALUES
 **	-
 */
-static void open_great(t_cmdtable *head_cmd, char *filename, int oflag)
+static void	open_great(t_cmdtable *head_cmd, char *filename, int oflag)
 {
 	if (head_cmd->fdout > 2)
 		close(head_cmd->fdout);
@@ -66,10 +66,10 @@ static void open_great(t_cmdtable *head_cmd, char *filename, int oflag)
 **	RETURN VALUES
 **	-
 */
-static void open_redirect_table(t_cmdtable *head_cmd)
+static void	open_redirect_table(t_cmdtable *head_cmd)
 {
-	int i;
-	int token;
+	int	i;
+	int	token;
 
 	i = 0;
 	while (head_cmd->redirect[i] && head_cmd->err_nb == -1)
@@ -96,9 +96,9 @@ static void open_redirect_table(t_cmdtable *head_cmd)
 **	RETURN VALUES
 **	-
 */
-void open_redirection(void)
+void	open_redirection(void)
 {
-	t_cmdtable *head_cmd;
+	t_cmdtable	*head_cmd;
 
 	head_cmd = g_data.head_cmd;
 	while (head_cmd != NULL)

@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:34:53 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:34:55 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:36:03 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	Return true if the string is redirect and false if not
 */
-bool is_redirect(char *cmd)
+bool	is_redirect(char *cmd)
 {
-	int token;
+	int	token;
 
 	token = get_token(cmd);
 	if (token == INPUT || token == HEREDOC || token == TRUNC || token == APPEND)
@@ -40,7 +40,7 @@ bool is_redirect(char *cmd)
 **	RETURN VALUES
 **	-
 */
-void init_count(t_counter *count)
+void	init_count(t_counter *count)
 {
 	count->word = 0;
 	count->redirect = 0;
@@ -55,9 +55,9 @@ void init_count(t_counter *count)
 **	RETURN VALUES
 **	Return allocated memory from new array of string.
 */
-static char **malloc_array_str(int count)
+static char	**malloc_array_str(int count)
 {
-	char **str;
+	char	**str;
 
 	str = (char **)malloc(((sizeof(char *)) * (count + 1)));
 	if (!str)
@@ -75,7 +75,7 @@ static char **malloc_array_str(int count)
 **	RETURN VALUES
 **	-
 */
-void init_cmd_value(t_cmd_value *cmd_value, t_counter *count)
+void	init_cmd_value(t_cmd_value *cmd_value, t_counter *count)
 {
 	if (count->word > 0)
 		cmd_value->word = malloc_array_str(count->word);
@@ -96,7 +96,7 @@ void init_cmd_value(t_cmd_value *cmd_value, t_counter *count)
 **	RETURN VALUES
 **	Return true if contains variable expansion and false if its not.
 */
-bool is_var_expansion(char *str)
+bool	is_var_expansion(char *str)
 {
 	while (*str)
 	{

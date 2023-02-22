@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:36:05 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:36:06 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:36:37 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **	RETURN VALUES
 **	-
 */
-static void put_msg_heredoc(char *eof, int fd)
+static void	put_msg_heredoc(char *eof, int fd)
 {
 	ft_putstr_fd("minishell", fd);
 	ft_putstr_fd(": ", fd);
@@ -32,7 +32,7 @@ static void put_msg_heredoc(char *eof, int fd)
 	ft_putstr_fd(" (wanted `", fd);
 	ft_putstr_fd(eof, fd);
 	ft_putendl_fd("')", fd);
-	return;
+	return ;
 }
 
 /*	WRITE_HEREDOC
@@ -45,9 +45,9 @@ static void put_msg_heredoc(char *eof, int fd)
 **	RETURN VALUES
 **	-
 */
-void write_heredoc(char *eof, int *fd)
+void	write_heredoc(char *eof, int *fd)
 {
-	char *line;
+	char	*line;
 
 	signal(SIGINT, sig_handle_heredoc_child);
 	line = readline("> ");
@@ -60,7 +60,7 @@ void write_heredoc(char *eof, int *fd)
 			exit(1);
 		}
 		if (strcmp_eq(eof, line))
-			break;
+			break ;
 		write(*fd, line, ft_strlen(line));
 		write(*fd, "\n", 1);
 		free(line);
@@ -82,11 +82,11 @@ void write_heredoc(char *eof, int *fd)
 **	RETURN VALUES
 **	-
 */
-void exec_heredoc(t_cmdtable *head_cmd, char *eof)
+void	exec_heredoc(t_cmdtable *head_cmd, char *eof)
 {
-	int fd[2];
-	int pid;
-	int wstatus;
+	int	fd[2];
+	int	pid;
+	int	wstatus;
 
 	if (head_cmd->fdin > 2)
 		close(head_cmd->fdin);

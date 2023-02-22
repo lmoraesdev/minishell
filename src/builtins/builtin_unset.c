@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:31:10 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:31:11 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:30:06 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **	RETURN VALUES
 **	-
 */
-void unset_env_var(t_env **env_list, char *word)
+void	unset_env_var(t_env **env_list, char *word)
 {
 	if (strcmp_eq((*env_list)->name, word))
 		del_first_node(env_list);
@@ -39,7 +39,7 @@ void unset_env_var(t_env **env_list, char *word)
 **	RETURN VALUES
 **	-
 */
-void unset_error_msg(char *word)
+void	unset_error_msg(char *word)
 {
 	ft_putstr_fd("-minishell: unset: `", 2);
 	ft_putstr_fd(word, 2);
@@ -56,9 +56,9 @@ void unset_error_msg(char *word)
 **	RETURN VALUES
 **	-
 */
-void builtin_unset(t_cmdtable *cmd_table)
+void	builtin_unset(t_cmdtable *cmd_table)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (cmd_table->word[i] != NULL)

@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:30:32 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:30:33 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/22 12:26:31 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	-
 */
-void builtin_echo(char **word)
+void	builtin_echo(char **word)
 {
-	int i;
+	int	i;
 
 	i = 1;
 	while (strcmp_eq(word[i], "-n"))
