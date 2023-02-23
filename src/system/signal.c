@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:47:21 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:47:23 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:30:08 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void sig_handle_minishell(int signum)
+void	sig_handle_minishell(int signum)
 {
 	write(1, "\n", 1);
 	g_data.status = 130;
@@ -40,7 +40,7 @@ void sig_handle_minishell(int signum)
 **	RETURN VALUES
 **	-
 */
-void sig_handle_exec_parent(int signum)
+void	sig_handle_exec_parent(int signum)
 {
 	if (signum == 2)
 		g_data.status = 130;
@@ -61,7 +61,7 @@ void sig_handle_exec_parent(int signum)
 **	RETURN VALUES
 **	-
 */
-void sig_handle_heredoc_child(int signal)
+void	sig_handle_heredoc_child(int signal)
 {
 	write(1, "\n", 1);
 	clear_minishell();

@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:47:43 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:47:45 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:31:01 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 **	RETURN VALUES
 **	Return allocated memory from environment value
 */
-char *get_env_value(char *envp, char *env_name)
+char	*get_env_value(char *envp, char *env_name)
 {
-	int key_len;
-	int value_len;
-	char *env_value;
+	int		key_len;
+	int		value_len;
+	char	*env_value;
 
 	if (!envp && !env_name)
 		return (NULL);
@@ -45,10 +45,10 @@ char *get_env_value(char *envp, char *env_name)
 **	RETURN VALUES
 **	-
 */
-void save_env(char **envp)
+void	save_env(char **envp)
 {
-	int i;
-	char **split_env;
+	int		i;
+	char	**split_env;
 
 	i = 0;
 	while (envp[i])
@@ -62,5 +62,5 @@ void save_env(char **envp)
 		ft_matrix_free(&split_env);
 		i++;
 	}
-	return;
+	return ;
 }

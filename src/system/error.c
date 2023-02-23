@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:46:10 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:46:13 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:32:21 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **	RETURN VALUES
 **	-
 */
-void error_msg_exit(char *title, char *msg, int fd)
+void	error_msg_exit(char *title, char *msg, int fd)
 {
 	put_msg(title, msg, fd);
 	exit(EXIT_FAILURE);

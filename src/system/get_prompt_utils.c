@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:45:46 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:45:54 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:32:01 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,12 +22,12 @@
 **	RETURN VALUES
 **	Returns the login line (user@hostname:) as a string
 */
-char *colored_login(char **user, char **hostname)
+char	*colored_login(char **user, char **hostname)
 {
-	char *login;
-	char *colon;
-	char *colored_login;
-	char *final_login;
+	char	*login;
+	char	*colon;
+	char	*colored_login;
+	char	*final_login;
 
 	login = ft_strcat(*user, *hostname);
 	colored_login = ft_strcat(CYN, login);
@@ -50,13 +50,13 @@ char *colored_login(char **user, char **hostname)
 **	RETURN VALUES
 **	Returns the colored prompt line (user@hostname:cwd$ ) as a string
 */
-char *colored_prompt_line(char **login)
+char	*colored_prompt_line(char **login)
 {
-	char *cwd;
-	char aux[1024];
-	char *colored_aux;
-	char *dollar;
-	char *prompt_line;
+	char	*cwd;
+	char	aux[1024];
+	char	*colored_aux;
+	char	*dollar;
+	char	*prompt_line;
 
 	getcwd(aux, sizeof(aux));
 	colored_aux = ft_strcat(MAG, aux);

@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:45:15 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:45:26 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:32:59 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
 **	Return 0 if successful and 1 if there is memory allocation error or if there
 **	is no content in name and value
 */
-int env_lst_add_back(t_env **head_env, char *name, char *value)
+int	env_lst_add_back(t_env **head_env, char *name, char *value)
 {
 	t_env *new_node;
 	t_env *temp;
@@ -59,7 +59,7 @@ int env_lst_add_back(t_env **head_env, char *name, char *value)
 **	RETURN VALUES
 **	-
 */
-void free_env_lst(t_env **head_env)
+void	free_env_lst(t_env **head_env)
 {
 	if (*head_env == NULL)
 		return;
@@ -79,9 +79,9 @@ void free_env_lst(t_env **head_env)
 **	RETURN VALUES
 **	-
 */
-void del_first_node(t_env **head_env)
+void	del_first_node(t_env **head_env)
 {
-	t_env *temp;
+	t_env	*temp;
 
 	free((*head_env)->name);
 	free((*head_env)->value);
@@ -101,10 +101,10 @@ void del_first_node(t_env **head_env)
 **	RETURN VALUES
 **	-
 */
-void del_node(t_env **env_list, char *word)
+void	del_node(t_env **env_list, char *word)
 {
-	t_env *temp;
-	t_env *aux;
+	t_env	*temp;
+	t_env	*aux;
 
 	temp = *env_list;
 	while (temp != NULL && temp->next != NULL)

@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:47:01 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:47:02 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/02/23 12:31:28 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void free_prompt_line(void)
+void	free_prompt_line(void)
 {
 	free(g_data.prompt_line);
 	g_data.prompt_line = NULL;
@@ -41,10 +41,10 @@ void free_prompt_line(void)
 **	RETURN VALUES
 **	Returns the login name (user@hostname) as a string
 */
-char *get_login(void)
+char	*get_login(void)
 {
-	char *user;
-	char *hostname;
+	char	*user;
+	char	*hostname;
 
 	user = ft_strcat(getenv("USER"), "@");
 	if (getenv("HOSTNAME") != NULL)
@@ -82,7 +82,7 @@ char *get_prompt_line(void)
 **	RETURN VALUES
 **	-
 */
-void get_prompt(void)
+void	get_prompt(void)
 {
 	g_data.prompt_line = get_prompt_line();
 	g_data.cmd_line = readline(g_data.prompt_line);
