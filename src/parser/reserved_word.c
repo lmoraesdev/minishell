@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   reserved_word.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:39:09 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:39:14 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:55:04 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	Returns the type of reserved word.
 */
-int is_reserved_word(char c)
+int	is_reserved_word(char c)
 {
 	if (c == '|')
 		return (PIPE);
@@ -45,9 +45,9 @@ int is_reserved_word(char c)
 **	RETURN VALUES
 **	Return true if it is a non-reserved word ans false if it is a reserved word
 */
-bool check_reserved_word(char **cmd, int *word_count, bool is_word)
+bool	check_reserved_word(char **cmd, int *word_count, bool is_word)
 {
-	int reserved_word;
+	int	reserved_word;
 
 	reserved_word = is_reserved_word(**cmd);
 	if (reserved_word == -1)
@@ -70,10 +70,10 @@ bool check_reserved_word(char **cmd, int *word_count, bool is_word)
 **	RETURN VALUES
 **	Returns the type of reserved word it found first.
 */
-int find_first_reserved_char(char *cmd)
+int	find_first_reserved_char(char *cmd)
 {
-	int quote_type;
-	int char_type;
+	int	quote_type;
+	int	char_type;
 
 	while (*cmd != '\0')
 	{

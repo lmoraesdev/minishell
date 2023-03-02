@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parser.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:38:22 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:38:34 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 20:05:03 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 **	RETURN VALUES
 **	Return true if it is and false if not
 */
-static bool is_pipe_pipe(int value, int next_value)
+static bool	is_pipe_pipe(int value, int next_value)
 {
 	if (value == PIPE && next_value == PIPE)
 		return (true);
@@ -39,7 +39,7 @@ static bool is_pipe_pipe(int value, int next_value)
 **	RETURN VALUES
 **	Return true if it is and false if not
 */
-static bool is_redirect_pipe(int value, int next_value)
+static bool	is_redirect_pipe(int value, int next_value)
 {
 	if (value != PIPE && value != WORD && next_value == PIPE)
 		return (true);
@@ -56,9 +56,10 @@ static bool is_redirect_pipe(int value, int next_value)
 **	RETURN VALUES
 **	Return true if it is and false if not
 */
-static bool is_redirect_redirect(int value, int next_value)
+static bool	is_redirect_redirect(int value, int next_value)
 {
-	if (value != PIPE && value != WORD && next_value != PIPE && next_value != WORD)
+	if (value != PIPE && value != WORD && \
+	next_value != PIPE && next_value != WORD)
 		return (true);
 	return (false);
 }
@@ -72,7 +73,7 @@ static bool is_redirect_redirect(int value, int next_value)
 **	RETURN VALUES
 **	Return 0 if successful and 1 if not
 */
-static int syntax_redirect_error(int next_value)
+static int	syntax_redirect_error(int next_value)
 {
 	if (next_value == INPUT)
 		return (syntax_error(SYNTAX_ERR_INPUT));
@@ -94,9 +95,9 @@ static int syntax_redirect_error(int next_value)
 **	RETURN VALUES
 **	Return 0 if successful and 1 if not
 */
-int parser(void)
+int	parser(void)
 {
-	t_token *temp;
+	t_token	*temp;
 
 	if (g_data.head_token == NULL)
 		return (0);

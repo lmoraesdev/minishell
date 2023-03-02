@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   save_expand_utils.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:27:26 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:27:27 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:54:27 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 **	RETURN VALUES
 **	-
 */
-void save_str(char **result, char *str, bool space)
+void	save_str(char **result, char *str, bool space)
 {
 	if (*result != NULL)
 		strcat_space(result, str, space);
@@ -47,10 +47,10 @@ void save_str(char **result, char *str, bool space)
 **	RETURN VALUES
 **	-
 */
-void save_prefix(char **result, char *str, int diff)
+void	save_prefix(char **result, char *str, int diff)
 {
-	char *prefix;
-	char *temp_result;
+	char	*prefix;
+	char	*temp_result;
 
 	if (*result)
 	{
@@ -77,10 +77,10 @@ void save_prefix(char **result, char *str, int diff)
 **	RETURN VALUES
 **	-
 */
-void save_exit_code_suffix(char **result, char *str, char *exit, bool spc)
+void	save_exit_code_suffix(char **result, char *str, char *exit, bool spc)
 {
-	char *suffix;
-	char *aux;
+	char	*suffix;
+	char	*aux;
 
 	suffix = ft_substr(str, 2, ft_strlen(str) - 2);
 	if (*result)
@@ -109,9 +109,9 @@ void save_exit_code_suffix(char **result, char *str, char *exit, bool spc)
 **	RETURN VALUES
 **	-
 */
-void save_exit_code(char **result, char *str, bool space)
+void	save_exit_code(char **result, char *str, bool space)
 {
-	char *exit_code;
+	char	*exit_code;
 
 	exit_code = ft_itoa(g_data.status);
 	if (ft_strlen(str) > 2)
@@ -141,9 +141,9 @@ void save_exit_code(char **result, char *str, bool space)
 **	RETURN VALUES
 **	-
 */
-void save_expand_env(char **result, char *str, bool space)
+void	save_expand_env(char **result, char *str, bool space)
 {
-	char *env_value;
+	char	*env_value;
 
 	env_value = expand_env(str);
 	if (*result)

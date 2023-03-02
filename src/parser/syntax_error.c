@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   syntax_error.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:41:20 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:41:22 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 20:05:41 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	Return 1
 */
-int syntax_error(char *msg)
+int	syntax_error(char *msg)
 {
 	put_msg("minishell", msg, 2);
 	g_data.status = 2;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   save_reserved_word.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:39:54 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:39:55 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 20:04:06 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	Returns the found character pointer.
 */
-char *strchr_reserved(char *cmd)
+char	*strchr_reserved(char *cmd)
 {
 	while (*cmd != '\0')
 	{
@@ -41,7 +41,7 @@ char *strchr_reserved(char *cmd)
 **	RETURN VALUES
 **	Return string length
 */
-int strlen_reserved_word(char *str)
+int	strlen_reserved_word(char *str)
 {
 	if (ft_strncmp_eq(str, "<<", 2))
 		return (2);
@@ -62,14 +62,14 @@ int strlen_reserved_word(char *str)
 **	RETURN VALUES
 **	-
 */
-void save_reserved_word(t_split *split, char **cmd, int *i)
+void	save_reserved_word(t_split *split, char **cmd, int *i)
 {
-	char *reserve_char;
-	int size;
+	char	*reserve_char;
+	int		size;
 
 	reserve_char = strchr_reserved(*cmd);
 	if (reserve_char == NULL)
-		return;
+		return ;
 	size = reserve_char - *cmd;
 	if (size != 0)
 		split->words[(*i)++] = ft_substr(*cmd, 0, size);

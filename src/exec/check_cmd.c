@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   check_cmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:26:55 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:27:05 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:27:38 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 **	RETURN VALUES
 **	-
 */
-void check_cmd(char **word)
+void	check_cmd(char **word)
 {
-	char **path_list;
-	char *aux;
-	int i;
+	char	**path_list;
+	char	*aux;
+	int		i;
 
 	g_data.path_value = search_env_value("PATH");
 	if (g_data.path_value != NULL)
@@ -37,9 +37,7 @@ void check_cmd(char **word)
 		{
 			g_data.cmd_path = ft_strcat(path_list[i], aux);
 			if ((access(g_data.cmd_path, F_OK) == 0))
-			{
-				break;
-			}
+				break ;
 			free(g_data.cmd_path);
 			g_data.cmd_path = NULL;
 			i++;

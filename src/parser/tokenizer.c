@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   takenizer.c                                        :+:      :+:    :+:   */
+/*   tokenizer.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:42:08 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:42:10 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:55:15 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void tokenizer(void)
+void	tokenizer(void)
 {
 	g_data.splited_cmdl = split_cmd(g_data.cmd_line);
 }

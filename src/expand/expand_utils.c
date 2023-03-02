@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:27:47 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:27:48 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:30:00 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 **	RETURN VALUES
 **	Returns 1 if duplicated, otherwise returns 0
 */
-int is_double_single_quotes(char *str)
+int	is_double_single_quotes(char *str)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = 0;
 	j = 0;
@@ -51,7 +51,7 @@ int is_double_single_quotes(char *str)
 **	RETURN VALUES
 **	Returns 1 if invalid string, otherwise returns 0
 */
-int dont_expand(char *str)
+int	dont_expand(char *str)
 {
 	if (ft_strlen(str) == 1 || str[1] == '$')
 		return (1);
@@ -68,11 +68,11 @@ int dont_expand(char *str)
 **	RETURN VALUES
 **	-
 */
-void clean_quotes(char **str, char quote)
+void	clean_quotes(char **str, char quote)
 {
-	char **aux;
-	char *swap;
-	int i;
+	char	**aux;
+	char	*swap;
+	int		i;
 
 	i = 0;
 	aux = ft_split(*str, quote);
@@ -97,9 +97,9 @@ void clean_quotes(char **str, char quote)
 **	RETURN VALUES
 **	-
 */
-void add_space(char **result)
+void	add_space(char **result)
 {
-	char *aux;
+	char	*aux;
 
 	aux = ft_strdup(*result);
 	free(*result);
@@ -118,9 +118,9 @@ void add_space(char **result)
 **	RETURN VALUES
 **	-
 */
-void strcat_space(char **result, char *str, bool space)
+void	strcat_space(char **result, char *str, bool space)
 {
-	char *aux;
+	char	*aux;
 
 	aux = ft_strdup(*result);
 	free(*result);

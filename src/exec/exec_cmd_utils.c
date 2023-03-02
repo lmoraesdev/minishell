@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exec_cmd_utils.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:28:03 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:28:04 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:26:49 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 **	RETURN VALUES
 **	-
 */
-void open_pipe(void)
+void	open_pipe(void)
 {
-	int pipe_fd[2];
-	t_cmdtable *temp;
+	int			pipe_fd[2];
+	t_cmdtable	*temp;
 
 	temp = g_data.head_cmd;
 	while (temp != NULL)
@@ -50,15 +50,15 @@ void open_pipe(void)
 **	RETURN VALUES
 **	-
 */
-void wait_all_pids(int pid[1024], int id)
+void	wait_all_pids(int pid[1024], int id)
 {
-	int p_status;
-	int j;
+	int	p_status;
+	int	j;
 
 	j = 0;
 	p_status = 0;
 	if (id == -1)
-		return;
+		return ;
 	while (j <= id)
 	{
 		waitpid(pid[j], &p_status, 0);
@@ -77,7 +77,7 @@ void wait_all_pids(int pid[1024], int id)
 **	RETURN VALUES
 **	-
 */
-void close_node_fds(t_cmdtable *head)
+void	close_node_fds(t_cmdtable *head)
 {
 	if (head->fdout > 2)
 		close(head->fdout);
@@ -94,7 +94,7 @@ void close_node_fds(t_cmdtable *head)
 **	RETURN VALUES
 **	-
 */
-void close_list_fds(t_cmdtable *head)
+void	close_list_fds(t_cmdtable *head)
 {
 	while (head)
 	{
@@ -112,7 +112,7 @@ void close_list_fds(t_cmdtable *head)
 **	RETURN VALUES
 **	-
 */
-void dup_fds(t_cmdtable *head)
+void	dup_fds(t_cmdtable *head)
 {
 	if (head->fdout > 2)
 		dup2(head->fdout, 1);

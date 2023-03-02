@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   split_cmd.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:40:52 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:40:54 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 20:06:51 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 **	RETURN VALUES
 **	-
 */
-void make_words(t_split *split, char *cmd)
+void	make_words(t_split *split, char *cmd)
 {
-	int first_type_char;
-	int i;
+	int	first_type_char;
+	int	i;
 
 	i = 0;
 	while (i < split->num_word)
@@ -52,10 +52,10 @@ void make_words(t_split *split, char *cmd)
 **	RETURN VALUES
 **	Return number of words.
 */
-int count_cmd_words(char *cmd)
+int	count_cmd_words(char *cmd)
 {
-	int word_count;
-	bool is_word;
+	int		word_count;
+	bool	is_word;
 
 	word_count = 0;
 	is_word = false;
@@ -80,9 +80,9 @@ int count_cmd_words(char *cmd)
 **	RETURN VALUES
 **	Return allocated memory from new array of string.
 */
-char **split_cmd(char *cmd)
+char	**split_cmd(char *cmd)
 {
-	t_split split;
+	t_split	split;
 
 	if (!cmd)
 		return (NULL);
