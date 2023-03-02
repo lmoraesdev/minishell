@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   error_exit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:27:28 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:27:30 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:27:05 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void is_dir_exit(char *word)
+void	is_dir_exit(char *word)
 {
 	ft_putstr_fd("minishell: ", 2);
 	put_msg(word, IS_DIR, 2);
@@ -41,7 +41,7 @@ void is_dir_exit(char *word)
 **	RETURN VALUES
 **	-
 */
-void no_such_file_exit(char *word, int status)
+void	no_such_file_exit(char *word, int status)
 {
 	ft_putstr_fd("minishell: ", 2);
 	put_msg(word, NO_FILE_DIR, 2);
@@ -61,7 +61,7 @@ void no_such_file_exit(char *word, int status)
 **	RETURN VALUES
 **	-
 */
-void invalid_permission_exit(char *word, int status)
+void	invalid_permission_exit(char *word, int status)
 {
 	ft_putstr_fd("minishell: ", 2);
 	put_msg(word, INVALID_PERMISSION, 2);

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   taken_lst.c                                        :+:      :+:    :+:   */
+/*   token_lst.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:41:50 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:41:51 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 20:05:35 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@
 **	RETURN VALUES
 **	Return 0 if successful and 1 if there is memory allocation error
 */
-int token_lst_add_back(t_token **head_token, int value)
+int	token_lst_add_back(t_token **head_token, int value)
 {
-	t_token *new_node;
-	t_token *temp;
+	t_token	*new_node;
+	t_token	*temp;
 
 	new_node = (t_token *)malloc(sizeof(t_token));
 	if (!new_node)
@@ -54,12 +54,12 @@ int token_lst_add_back(t_token **head_token, int value)
 **	RETURN VALUES
 **	-
 */
-void free_token_lst(t_token **head_token)
+void	free_token_lst(t_token **head_token)
 {
-	t_token *temp;
+	t_token	*temp;
 
 	if (*head_token == NULL)
-		return;
+		return ;
 	while (*head_token != NULL)
 	{
 		temp = (*head_token)->next;

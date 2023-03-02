@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_cmd_table.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:35:33 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 12:37:43 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:23:57 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static void	save_table_value(char ***table_v, char ***cmd, int *i, int *count)
 static void	save_cmd_line(t_cmdtable **head_cmd, char ***cmd, t_counter *count)
 {
 	t_cmd_value	cmd_v;
-	t_counter		index;
+	t_counter	index;
 
 	init_cmd_value(&cmd_v, count);
 	init_count(&index);
@@ -120,7 +120,7 @@ void	create_cmd_table(void)
 {
 	t_counter		count;
 	t_token			*head_token;
-	char				**cmd;
+	char			**cmd;
 
 	head_token = g_data.head_token;
 	init_count(&count);

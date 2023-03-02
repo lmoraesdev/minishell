@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   save_word_with_quotes.c                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:40:20 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:40:30 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 20:06:15 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,14 +22,14 @@
 **	RETURN VALUES
 **	-
 */
-void skip_num_char(char **str, int num)
+void	skip_num_char(char **str, int num)
 {
 	while (**str && num > 0)
 	{
 		(*str)++;
 		num--;
 	}
-	return;
+	return ;
 }
 
 /*	STRLEN_WITH_QUOTES
@@ -42,10 +42,10 @@ void skip_num_char(char **str, int num)
 **	RETURN VALUES
 **	Return string length
 */
-int strlen_with_quotes(char *cmd)
+int	strlen_with_quotes(char *cmd)
 {
-	t_quotes quotes;
-	int size;
+	t_quotes	quotes;
+	int			size;
 
 	quotes.in = false;
 	size = 0;
@@ -77,9 +77,9 @@ int strlen_with_quotes(char *cmd)
 **	RETURN VALUES
 **	-
 */
-void save_word_with_quotes(t_split *split, char **cmd, int *i)
+void	save_word_with_quotes(t_split *split, char **cmd, int *i)
 {
-	int size;
+	int	size;
 
 	size = strlen_with_quotes(*cmd);
 	split->words[(*i)++] = ft_substr(*cmd, 0, size);

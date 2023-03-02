@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_path.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:28:50 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:28:51 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:26:02 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	Returns the string of the variable value
 */
-char *search_env_value(char *var)
+char	*search_env_value(char *var)
 {
-	t_env *ptr;
+	t_env	*ptr;
 
 	ptr = g_data.head_env;
 	while (ptr != NULL)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   exec_cmd.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:28:25 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:28:27 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:25:35 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	-
 */
-void check_is_dir(char *word)
+void	check_is_dir(char *word)
 {
-	DIR *dir;
+	DIR	*dir;
 
 	dir = opendir(word);
 	if (dir)
@@ -31,7 +31,8 @@ void check_is_dir(char *word)
 		closedir(dir);
 		is_dir_exit(word);
 	}
-	else if ((ENOENT == errno && g_data.cmd_path == NULL) || (access(word, X_OK) == -1))
+	else if ((ENOENT == errno && g_data.cmd_path == NULL) || \
+	(access(word, X_OK) == -1))
 		no_such_file_exit(word, 127);
 	else if ((access(word, X_OK) == 0))
 		g_data.cmd_path = word;
@@ -46,7 +47,7 @@ void check_is_dir(char *word)
 **	RETURN VALUES
 **	-
 */
-void exec_cmd(t_cmdtable *head_table)
+void	exec_cmd(t_cmdtable *head_table)
 {
 	exec_builtin_child(head_table);
 	if (g_data.cmd_path == NULL)
@@ -69,10 +70,10 @@ void exec_cmd(t_cmdtable *head_table)
 **	RETURN VALUES
 **	-
 */
-void check_redirect(t_cmdtable *head)
+void	check_redirect(t_cmdtable *head)
 {
 	if (!head->err_file)
-		return;
+		return ;
 	if (head->err_nb == ENOENT)
 		no_such_file_exit(head->err_file, 1);
 	if (head->err_nb == EACCES)
@@ -88,7 +89,7 @@ void check_redirect(t_cmdtable *head)
 **	RETURN VALUES
 **	-
 */
-void child_process(t_cmdtable *head)
+void	child_process(t_cmdtable *head)
 {
 	check_redirect(head);
 	check_cmd(head->word);
@@ -108,11 +109,11 @@ void child_process(t_cmdtable *head)
 **	RETURN VALUES
 **	-
 */
-void fork_it(void)
+void	fork_it(void)
 {
-	int pid[1024];
-	int id;
-	t_cmdtable *head;
+	int			pid[1024];
+	int			id;
+	t_cmdtable	*head;
 
 	head = g_data.head_cmd;
 	id = -1;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cmd_table_lst.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:33:52 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 12:33:11 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:23:03 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ void	free_cmd_lst(t_cmdtable **head_cmd)
 	t_cmdtable	*temp;
 
 	if (*head_cmd == NULL)
-		return;
+		return ;
 	while (*head_cmd != NULL)
 	{
 		ft_matrix_free(&(*head_cmd)->word);
@@ -57,7 +57,7 @@ void	cmd_lst_add_front(t_cmdtable **head_cmd, t_cmd_value cmd_v)
 
 	ptr = (t_cmdtable *)malloc(sizeof(t_cmdtable));
 	if (!ptr)
-		return;
+		return ;
 	ptr->word = cmd_v.word;
 	ptr->redirect = cmd_v.redirect;
 	ptr->fdin = 0;

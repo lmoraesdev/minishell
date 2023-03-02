@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   expand.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:27:35 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:27:36 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/02 19:29:04 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@
 **	RETURN VALUES
 **	-
 */
-char *expand_env(char *word)
+char	*expand_env(char *word)
 {
-	char **temp;
-	char *value;
+	char	**temp;
+	char	*value;
 
 	value = NULL;
 	if (!ft_strncmp_eq(word, "$?", 2))
@@ -48,7 +48,7 @@ char *expand_env(char *word)
 **	RETURN VALUES
 **	-
 */
-static void check_expand(char **result, char *dollar, char *str, bool space)
+static void	check_expand(char **result, char *dollar, char *str, bool space)
 {
 	if (dollar - str)
 		save_prefix(result, str, dollar - str);
@@ -69,10 +69,10 @@ static void check_expand(char **result, char *dollar, char *str, bool space)
 **	RETURN VALUES
 **	-
 */
-static void expand_word(char **str)
+static void	expand_word(char **str)
 {
-	t_expand exp;
-	int i;
+	t_expand	exp;
+	int			i;
 
 	i = init_expand(&exp, *str);
 	while (exp.split[i])
@@ -87,7 +87,7 @@ static void expand_word(char **str)
 		else if (dont_expand(exp.find_dollar))
 		{
 			ft_matrix_free(&exp.split);
-			return;
+			return ;
 		}
 		else
 			check_expand(&exp.result, exp.find_dollar, exp.split[i], exp.space);
@@ -107,9 +107,9 @@ static void expand_word(char **str)
 **	RETURN VALUES
 **	-
 */
-void parse_expansion(char **word)
+void	parse_expansion(char **word)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (word[i])
@@ -139,9 +139,9 @@ void parse_expansion(char **word)
 **	RETURN VALUES
 **	-
 */
-void expand(void)
+void	expand(void)
 {
-	t_cmdtable *temp;
+	t_cmdtable	*temp;
 
 	temp = g_data.head_cmd;
 	while (temp != NULL)
