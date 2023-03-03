@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:35:44 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:36:02 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:57:39 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@
 **	RETURN VALUES
 **	-
 */
-void put_msg(char *title, char *msg, int fd)
+void	put_msg(char *title, char *msg, int fd)
 {
 	ft_putstr_fd(title, fd);
 	ft_putstr_fd(": ", fd);
 	ft_putendl_fd(msg, fd);
-	return;
+	return ;
 }
 
 /*	PUT_MSG_CMD
@@ -43,12 +43,12 @@ void put_msg(char *title, char *msg, int fd)
 **	RETURN VALUES
 **	-
 */
-void put_msg_cmd(char *title, char *cmd, char *msg, int fd)
+void	put_msg_cmd(char *title, char *cmd, char *msg, int fd)
 {
 	ft_putstr_fd(title, fd);
 	ft_putstr_fd(": ", fd);
 	ft_putstr_fd(cmd, fd);
 	ft_putstr_fd(": ", fd);
 	ft_putendl_fd(msg, fd);
-	return;
+	return ;
 }

@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:43:15 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 11:43:16 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:54:31 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	-
 */
-void skip_quotes(char **cmd)
+void	skip_quotes(char **cmd)
 {
-	int quote_type;
+	int	quote_type;
 
 	quote_type = is_quote_type(**cmd);
 	if (quote_type != -1)
@@ -32,5 +32,5 @@ void skip_quotes(char **cmd)
 		while (**cmd && **cmd != quote_type)
 			(*cmd)++;
 	}
-	return;
+	return ;
 }

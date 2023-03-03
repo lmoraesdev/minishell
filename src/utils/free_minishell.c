@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:34:24 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:34:36 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:57:11 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void free_minishell(void)
+void	free_minishell(void)
 {
 	free_token_lst(&g_data.head_token);
 	if (g_data.cmd_line != NULL)

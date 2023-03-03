@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:37:30 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:37:45 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:58:18 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,9 +22,9 @@
 **	RETURN VALUES
 **	Return 1 if strings are equal and 0 if it's different.
 */
-int strcmp_eq(char *s1, char *s2)
+int	strcmp_eq(char *s1, char *s2)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!s1 || !s2)

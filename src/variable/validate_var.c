@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:32:16 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:32:26 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:53:43 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,9 +24,9 @@
 **	Return true if variable name contains only allowed characters and false if
 **	it's not.
 */
-bool validate_var_name(char *var_name)
+bool	validate_var_name(char *var_name)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (ft_isdigit(var_name[i]))

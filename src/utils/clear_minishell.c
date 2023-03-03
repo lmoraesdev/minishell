@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:33:31 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:33:42 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/03 17:57:06 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void clear_minishell(void)
+void	clear_minishell(void)
 {
 	if (g_data.cmd_line != NULL)
 	{
