@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   minishell.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:28:02 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/06 21:13:48 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:55:44 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,22 +64,22 @@
 
 typedef struct	s_env
 {
-	char	*name;
-	char	*value;
-	struct s_env *next;
+	char			*name;
+	char			*value;
+	struct s_env	*next;
 }	t_env;
 
 typedef struct	s_token
 {
-	int			value;
-	struct	s_token *next;
-} t_token;
+	int				value;
+	struct s_token	*next;
+}	t_token;
 
 typedef struct s_quotes
 {
 	int		type;
 	bool	in;
-} t_quotes;
+}	t_quotes;
 
 typedef struct s_expand
 {
@@ -87,54 +87,54 @@ typedef struct s_expand
 	char	*result;
 	bool	space;
 	char	*find_dollar;
-} t_expand;
+}	t_expand;
 
 typedef struct s_split
 {
 	char	**words;
 	int		num_word;
-} t_split;
+}	t_split;
 
 typedef struct s_counter
 {
 	int	word;
 	int	redirect;
-} t_counter;
+}	t_counter;
 
 typedef struct s_cmd_value
 {
 	char	**word;
 	char	**redirect;
-} t_cmd_value;
+}	t_cmd_value;
 
 typedef struct s_cmdtable
 {
-	char	**word;
-	int		fdin;
-	int		fdout;
-	char	**redirect;
-	char	*err_file;
-	int		err_nb;
-	struct s_cmdtable *next;
-} t_cmdtable;
+	char				**word;
+	int					fdin;
+	int					fdout;
+	char				**redirect;
+	char				*err_file;
+	int					err_nb;
+	struct s_cmdtable	*next;
+}	t_cmdtable;
 
 typedef struct s_data
 {
-	t_token			*head_token;
-	t_env				*head_env;
+	t_token		*head_token;
+	t_env		*head_env;
 	t_cmdtable	*head_cmd;
-	char				*cmd_line;
-	char				*env_value;
-	char				*cmd_path;
-	char				**splited_cmdl;
-	char				*prompt_line;
-	char				*path_value;
-	int					status;
-	bool				is_pipe;
-	bool				interrupt_heredoc;
-} t_data;
+	char		*cmd_line;
+	char		*env_value;
+	char		*cmd_path;
+	char		**splited_cmdl;
+	char		*prompt_line;
+	char		*path_value;
+	int			status;
+	bool		is_pipe;
+	bool		interrupt_heredoc;
+}	t_data;
 
-extern t_data g_data;
+extern t_data	g_data;
 
 // BUILTINS
 int		exec_builtin_parent(t_cmdtable *head_table, int builtin);

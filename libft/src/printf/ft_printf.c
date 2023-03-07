@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:12:10 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:12:11 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:46:17 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int check_type(const char *str, va_list ap)
+int	check_type(const char *str, va_list ap)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (*str == 'c' || *str == '%')
@@ -30,11 +30,11 @@ int check_type(const char *str, va_list ap)
 	return (len);
 }
 
-int ft_printf(const char *str, ...)
+int	ft_printf(const char *str, ...)
 {
-	va_list ap;
-	int i;
-	int len;
+	va_list	ap;
+	int		i;
+	int		len;
 
 	va_start(ap, str);
 	len = 0;

@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   conversions.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:11:20 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:11:21 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:47:25 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int convert_char(const char str, va_list ap)
+int	convert_char(const char str, va_list ap)
 {
-	int n;
-	char c;
+	int		n;
+	char	c;
 
 	n = 0;
 	if (str == 'c')
@@ -33,10 +33,10 @@ int convert_char(const char str, va_list ap)
 	return (n);
 }
 
-int convert_int(va_list ap)
+int	convert_int(va_list ap)
 {
-	int n;
-	char *str;
+	int		n;
+	char	*str;
 
 	str = ft_itoa(va_arg(ap, int));
 	n = ft_strlen(str);
@@ -45,9 +45,9 @@ int convert_int(va_list ap)
 	return (n);
 }
 
-int convert_hex(const char str, va_list ap)
+int	convert_hex(const char str, va_list ap)
 {
-	int n;
+	int	n;
 
 	n = 0;
 	if (str == 'p')
@@ -61,18 +61,18 @@ int convert_hex(const char str, va_list ap)
 	return (n);
 }
 
-int convert_un(va_list ap)
+int	convert_un(va_list ap)
 {
-	int n;
+	int	n;
 
 	n = utoa(va_arg(ap, int));
 	return (n);
 }
 
-int convert_str(va_list ap)
+int	convert_str(va_list ap)
 {
-	int n;
-	char *str;
+	int		n;
+	char	*str;
 
 	str = va_arg(ap, char *);
 	if (!str)

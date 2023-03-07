@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   str_withou_quotes.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:44:06 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/03 17:56:10 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:42:31 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

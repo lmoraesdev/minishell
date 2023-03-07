@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   builtin_unset.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:31:10 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 12:30:06 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:39:15 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

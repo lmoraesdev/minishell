@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_prompt_utils.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:45:46 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/23 12:32:01 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:43:16 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

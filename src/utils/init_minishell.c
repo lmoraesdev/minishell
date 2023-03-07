@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   init_minishell.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:35:10 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/03 17:57:23 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:43:43 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

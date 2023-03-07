@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   builtin_export_utils.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:30:51 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 12:27:58 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:39:01 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

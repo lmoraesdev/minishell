@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   builtin_echo.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:30:32 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 12:26:31 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:38:25 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -133,4 +133,7 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+leaks: re
+    valgrind --leak-check=full --log-file="leaks.txt" ./$(NAME)
+
+.PHONY: all clean fclean re leaks
