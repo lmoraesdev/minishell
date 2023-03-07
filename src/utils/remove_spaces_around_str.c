@@ -6,7 +6,7 @@
 /*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:36:40 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/07 02:15:30 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:23:47 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,13 +24,8 @@
 		*/
 char	*remove_spaces_around_str(char *str)
 {
-<<<<<<< HEAD
 	char	*new_str;
 	int		str_len;
-=======
-	char		*new_str;
-	int			str_len;
->>>>>>> 8b31d611841956efd9de3cb745356d37cb701393
 
 	if (!str)
 		return (NULL);

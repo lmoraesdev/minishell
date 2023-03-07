@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   utoa.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:13:01 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:13:14 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:24:35 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *n_convert(char *str, size_t size, unsigned int num)
+static char	*n_convert(char *str, size_t size, unsigned int num)
 {
 	str[size] = '\0';
 	while (size--)
@@ -23,9 +23,9 @@ static char *n_convert(char *str, size_t size, unsigned int num)
 	return (str);
 }
 
-static size_t nb_size(unsigned int num)
+static size_t	nb_size(unsigned int num)
 {
-	size_t len;
+	size_t	len;
 
 	len = 1;
 	num /= 10;
@@ -37,10 +37,10 @@ static size_t nb_size(unsigned int num)
 	return (len);
 }
 
-int utoa(unsigned int n)
+int	utoa(unsigned int n)
 {
-	size_t n_digits;
-	char *str;
+	size_t	n_digits;
+	char	*str;
 
 	n_digits = nb_size(n);
 	str = malloc(sizeof(char) * (n_digits + 1));

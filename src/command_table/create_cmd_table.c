@@ -3,14 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   create_cmd_table.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:35:33 by lbatista          #+#    #+#             */
-<<<<<<< HEAD
-/*   Updated: 2023/03/07 02:07:42 by mvavasso         ###   ########.fr       */
-=======
-/*   Updated: 2023/03/06 21:03:42 by lbatista         ###   ########.fr       */
->>>>>>> 8b31d611841956efd9de3cb745356d37cb701393
+/*   Updated: 2023/03/07 02:24:00 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,17 +74,10 @@ static void	save_cmd_line(t_cmdtable **head_cmd, char ***cmd, t_counter *count)
 	{
 		if (count->redirect > 0 && is_redirect(**cmd))
 		{
-<<<<<<< HEAD
 			save_table_value(&cmd_v.redirect, cmd, &index.redirect, \
 			&count->redirect);
 			save_table_value(&cmd_v.redirect, cmd, &index.redirect, \
 			&count->redirect);
-=======
-			save_table_value(&cmd_v.redirect, cmd, &index.redirect,
-				&count->redirect);
-			save_table_value(&cmd_v.redirect, cmd, &index.redirect,
-				&count->redirect);
->>>>>>> 8b31d611841956efd9de3cb745356d37cb701393
 		}
 		else if (count->word > 0)
 			save_table_value(&cmd_v.word, cmd, &index.word, &count->word);

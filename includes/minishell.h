@@ -6,7 +6,7 @@
 /*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:28:02 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/07 01:55:44 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:26:14 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,14 +62,14 @@
 # define CYN "\001\033[1;36m\002"
 # define RESET "\001\033[0m\002"
 
-typedef struct	s_env
+typedef struct s_env
 {
 	char			*name;
 	char			*value;
 	struct s_env	*next;
 }	t_env;
 
-typedef struct	s_token
+typedef struct s_token
 {
 	int				value;
 	struct s_token	*next;
