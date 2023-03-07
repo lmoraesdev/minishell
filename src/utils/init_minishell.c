@@ -6,7 +6,7 @@
 /*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:35:10 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/07 01:43:43 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:13:27 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void minishell_init(void)
+void	minishell_init(void)
 {
 	g_data.head_cmd = NULL;
 	g_data.head_env = NULL;
@@ -44,7 +44,7 @@ void minishell_init(void)
 **	RETURN VALUES
 **	Returns 0
 */
-int init_expand(t_expand *exp, char *str)
+int	init_expand(t_expand *exp, char *str)
 {
 	exp->split = ft_split(str, ' ');
 	exp->result = NULL;

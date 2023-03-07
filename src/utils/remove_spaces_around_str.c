@@ -6,7 +6,7 @@
 /*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:36:40 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/07 01:43:51 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:15:30 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,10 @@
 		**	RETURN VALUES
 		**	Return allocated memory from new string
 		*/
-		char *
-		remove_spaces_around_str(char *str)
+char	*remove_spaces_around_str(char *str)
 {
-	char *new_str;
-	int str_len;
+	char	*new_str;
+	int		str_len;
 
 	if (!str)
 		return (NULL);

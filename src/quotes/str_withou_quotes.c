@@ -6,7 +6,7 @@
 /*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:44:06 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/07 01:42:31 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:10:03 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@
 **	RETURN VALUES
 **	Return count quotes.
 */
-int count_quotes_closed(char *var_value)
+int	count_quotes_closed(char *var_value)
 {
-	int quote_type;
-	bool quote_closed;
-	int count_quotes;
+	int		quote_type;
+	bool	quote_closed;
+	int		count_quotes;
 
 	quote_closed = true;
 	count_quotes = 0;
@@ -56,7 +56,7 @@ int count_quotes_closed(char *var_value)
 **	RETURN VALUES
 **	Return string length.
 */
-int strlen_without_quotes(char *var_value)
+int	strlen_without_quotes(char *var_value)
 {
 	return (ft_strlen(var_value) - count_quotes_closed(var_value) + 1);
 }
@@ -71,9 +71,9 @@ int strlen_without_quotes(char *var_value)
 **	RETURN VALUES
 **	Return string length.
 */
-bool is_save_char(t_quotes *quote, char ch)
+bool	is_save_char(t_quotes *quote, char ch)
 {
-	bool is_save;
+	bool	is_save;
 
 	is_save = false;
 	if (!quote->in)
@@ -100,11 +100,11 @@ bool is_save_char(t_quotes *quote, char ch)
 **	RETURN VALUES
 **	Return allocated memory.
 */
-char *str_without_quotes(char *str)
+char	*str_without_quotes(char *str)
 {
-	t_quotes quote;
-	char *result;
-	int i;
+	t_quotes	quote;
+	char		*result;
+	int			i;
 
 	result = (char *)malloc(sizeof(char) * (strlen_without_quotes(str)));
 	if (!result)

@@ -6,7 +6,7 @@
 /*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:34:24 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/07 01:43:39 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:13:56 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void free_minishell(void)
+void	free_minishell(void)
 {
 	free_token_lst(&g_data.head_token);
 	if (g_data.cmd_line != NULL)

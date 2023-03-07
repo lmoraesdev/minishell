@@ -6,7 +6,7 @@
 /*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:47:43 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/07 01:43:23 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:12:34 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,8 @@ void	save_env(char **envp)
 		split_env = ft_split(envp[i], '=');
 		if (split_env[0] != NULL)
 		{
-			env_lst_add_back(&g_data.head_env, ft_strdup(split_env[0]),
-											 get_env_value(envp[i], split_env[0]));
+			env_lst_add_back(&g_data.head_env, ft_strdup(split_env[0]), \
+			get_env_value(envp[i], split_env[0]));
 		}
 		ft_matrix_free(&split_env);
 		i++;

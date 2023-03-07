@@ -6,7 +6,7 @@
 /*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:35:33 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/02 19:23:57 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:07:42 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,8 +74,10 @@ static void	save_cmd_line(t_cmdtable **head_cmd, char ***cmd, t_counter *count)
 	{
 		if (count->redirect > 0 && is_redirect(**cmd))
 		{
-			save_table_value(&cmd_v.redirect, cmd, &index.redirect, &count->redirect);
-			save_table_value(&cmd_v.redirect, cmd, &index.redirect, &count->redirect);
+			save_table_value(&cmd_v.redirect, cmd, &index.redirect, \
+			&count->redirect);
+			save_table_value(&cmd_v.redirect, cmd, &index.redirect, \
+			&count->redirect);
 		}
 		else if (count->word > 0)
 			save_table_value(&cmd_v.word, cmd, &index.word, &count->word);

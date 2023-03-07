@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:27:14 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 12:38:51 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:09:04 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,10 +27,10 @@ void	run_cmd(void)
 {
 	tokenizer();
 	if (g_data.splited_cmdl == NULL)
-		return;
+		return ;
 	lexer();
 	if (parser() == FAILURE)
-		return;
+		return ;
 	create_cmd_table();
 	expand();
 	open_pipe();

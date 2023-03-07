@@ -3,22 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrncmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:08:34 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:08:43 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 02:08:17 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_strrncmp(const char *s1, const char *s2, size_t len)
+int	ft_strrncmp(const char *s1, const char *s2, size_t len)
 {
-	unsigned char *str1;
-	unsigned char *str2;
-	int i;
-	int j;
-	int count;
+	unsigned char	*str1;
+	unsigned char	*str2;
+	int				i;
+	int				j;
+	int				count;
 
 	str1 = (unsigned char *)s1;
 	str2 = (unsigned char *)s2;
