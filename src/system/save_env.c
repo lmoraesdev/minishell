@@ -56,8 +56,13 @@ void	save_env(char **envp)
 		split_env = ft_split(envp[i], '=');
 		if (split_env[0] != NULL)
 		{
+<<<<<<< HEAD
 			env_lst_add_back(&g_data.head_env, ft_strdup(split_env[0]), \
 			get_env_value(envp[i], split_env[0]));
+=======
+			env_lst_add_back(&g_data.head_env, ft_strdup(split_env[0]),
+				get_env_value(envp[i], split_env[0]));
+>>>>>>> 8b31d611841956efd9de3cb745356d37cb701393
 		}
 		ft_matrix_free(&split_env);
 		i++;

@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:07:02 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:07:10 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:15:30 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@
 **	RETURN VALUES
 **	Return 1 if strings are equal and 0 if it's different.
 */
-int ft_strncmp_eq(char *s1, char *s2, size_t n)
+int	ft_strncmp_eq(char *s1, char *s2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (n == 0)

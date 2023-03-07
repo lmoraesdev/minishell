@@ -67,7 +67,7 @@ void	free_env_lst(t_env **head_env)
 	{
 		del_first_node(head_env);
 	}
-	*head_env = NULL;
+	*head_env = NULL ;
 }
 
 /*	DEL_FIRST_NODE
