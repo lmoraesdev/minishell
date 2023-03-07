@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:47:43 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/23 12:31:01 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:05:55 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,7 @@ void	save_env(char **envp)
 		if (split_env[0] != NULL)
 		{
 			env_lst_add_back(&g_data.head_env, ft_strdup(split_env[0]),
-											 get_env_value(envp[i], split_env[0]));
+				get_env_value(envp[i], split_env[0]));
 		}
 		ft_matrix_free(&split_env);
 		i++;

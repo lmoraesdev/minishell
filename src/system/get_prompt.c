@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:47:01 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/23 12:31:28 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:05:37 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,9 +65,9 @@ char	*get_login(void)
 **	RETURN VALUES
 **	Returns the prompt line (user@hostname:cwd$ ) as a string
 */
-char *get_prompt_line(void)
+char	*get_prompt_line(void)
 {
-	char *login;
+	char	*login;
 
 	login = get_login();
 	return (colored_prompt_line(&login));
