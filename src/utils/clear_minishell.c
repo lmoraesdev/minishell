@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   clear_minishell.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:33:31 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:33:42 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:43:36 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

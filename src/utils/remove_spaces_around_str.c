@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   remove_spaces_around_str.c                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:36:40 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 14:57:35 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:43:51 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   validate_var.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/16 12:32:16 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/16 12:32:26 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/07 01:44:02 by mvavasso         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
