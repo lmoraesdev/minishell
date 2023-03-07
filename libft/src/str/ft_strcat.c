@@ -6,17 +6,17 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:04:30 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:05:52 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:17:33 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strcat(char *s1, char *s2)
+char	*ft_strcat(char *s1, char *s2)
 {
-	size_t i;
-	size_t len;
-	char *result;
+	size_t	i;
+	size_t	len;
+	char	*result;
 
 	len = (ft_strlen(s1) + ft_strlen(s2));
 	result = (char *)malloc(sizeof(char *) * (len + 1));

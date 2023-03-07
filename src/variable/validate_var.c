@@ -24,9 +24,9 @@
 **	Return true if variable name contains only allowed characters and false if
 **	it's not.
 */
-bool validate_var_name(char *var_name)
+bool	validate_var_name(char *var_name)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (ft_isdigit(var_name[i]))

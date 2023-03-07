@@ -23,12 +23,12 @@
 **	RETURN VALUES
 **	-
 */
-void put_msg(char *title, char *msg, int fd)
+void	put_msg(char *title, char *msg, int fd)
 {
 	ft_putstr_fd(title, fd);
 	ft_putstr_fd(": ", fd);
 	ft_putendl_fd(msg, fd);
-	return;
+	return ;
 }
 
 /*	PUT_MSG_CMD
@@ -43,12 +43,12 @@ void put_msg(char *title, char *msg, int fd)
 **	RETURN VALUES
 **	-
 */
-void put_msg_cmd(char *title, char *cmd, char *msg, int fd)
+void	put_msg_cmd(char *title, char *cmd, char *msg, int fd)
 {
 	ft_putstr_fd(title, fd);
 	ft_putstr_fd(": ", fd);
 	ft_putstr_fd(cmd, fd);
 	ft_putstr_fd(": ", fd);
 	ft_putendl_fd(msg, fd);
-	return;
+	return ;
 }

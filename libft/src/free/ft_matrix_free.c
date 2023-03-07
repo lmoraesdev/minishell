@@ -6,7 +6,7 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 12:57:37 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 12:57:49 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:20:08 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,13 +21,13 @@
 **	RETURN VALUES
 **	-
 */
-void ft_matrix_free(char ***matrix)
+void	ft_matrix_free(char ***matrix)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!(*matrix))
-		return;
+		return ;
 	while ((*matrix)[i])
 	{
 		free((*matrix)[i]);
@@ -35,5 +35,5 @@ void ft_matrix_free(char ***matrix)
 	}
 	free(*matrix);
 	*matrix = NULL;
-	return;
+	return ;
 }

@@ -57,7 +57,7 @@ void	save_env(char **envp)
 		if (split_env[0] != NULL)
 		{
 			env_lst_add_back(&g_data.head_env, ft_strdup(split_env[0]),
-											 get_env_value(envp[i], split_env[0]));
+				get_env_value(envp[i], split_env[0]));
 		}
 		ft_matrix_free(&split_env);
 		i++;

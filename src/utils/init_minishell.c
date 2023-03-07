@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void minishell_init(void)
+void	minishell_init(void)
 {
 	g_data.head_cmd = NULL;
 	g_data.head_env = NULL;
@@ -44,7 +44,7 @@ void minishell_init(void)
 **	RETURN VALUES
 **	Returns 0
 */
-int init_expand(t_expand *exp, char *str)
+int	init_expand(t_expand *exp, char *str)
 {
 	exp->split = ft_split(str, ' ');
 	exp->result = NULL;

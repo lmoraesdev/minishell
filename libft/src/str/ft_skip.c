@@ -6,13 +6,13 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:03:29 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:03:39 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:16:59 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int skip(const char *s, int i, char c)
+int	skip(const char *s, int i, char c)
 {
 	i++;
 	while (s[i] != c)

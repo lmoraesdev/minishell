@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	Return true if command line is variable declaration and false if it's not.
 */
-bool is_equal_sign(char *cmd)
+bool	is_equal_sign(char *cmd)
 {
 	if (ft_strchr(cmd, '=') == NULL)
 		return (false);

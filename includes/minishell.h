@@ -62,14 +62,14 @@
 # define CYN "\001\033[1;36m\002"
 # define RESET "\001\033[0m\002"
 
-typedef struct s_env
+typedef struct	s_env
 {
 	char			*name;
 	char			*value;
 	struct s_env	*next;
 }	t_env;
 
-typedef struct s_token
+typedef struct	s_token
 {
 	int				value;
 	struct s_token	*next;

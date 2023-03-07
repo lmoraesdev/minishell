@@ -65,9 +65,9 @@ char	*get_login(void)
 **	RETURN VALUES
 **	Returns the prompt line (user@hostname:cwd$ ) as a string
 */
-char *get_prompt_line(void)
+char	*get_prompt_line(void)
 {
-	char *login;
+	char	*login;
 
 	login = get_login();
 	return (colored_prompt_line(&login));

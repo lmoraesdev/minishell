@@ -21,9 +21,9 @@
 **	RETURN VALUES
 **	-
 */
-void skip_quotes(char **cmd)
+void	skip_quotes(char **cmd)
 {
-	int quote_type;
+	int	quote_type;
 
 	quote_type = is_quote_type(**cmd);
 	if (quote_type != -1)
@@ -32,5 +32,5 @@ void skip_quotes(char **cmd)
 		while (**cmd && **cmd != quote_type)
 			(*cmd)++;
 	}
-	return;
+	return ;
 }

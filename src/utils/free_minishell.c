@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void free_minishell(void)
+void	free_minishell(void)
 {
 	free_token_lst(&g_data.head_token);
 	if (g_data.cmd_line != NULL)

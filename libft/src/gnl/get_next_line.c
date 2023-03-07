@@ -6,17 +6,17 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 12:58:48 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 12:58:58 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/06 21:22:04 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *get_next_line(int fd)
+char	*get_next_line(int fd)
 {
-	char *buffer;
-	char *line;
-	static char *save;
+	char		*buffer;
+	char		*line;
+	static char	*save;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
@@ -36,10 +36,10 @@ char *get_next_line(int fd)
 	return (line);
 }
 
-char *get_line(int fd, char **buffer, char **save)
+char	*get_line(int fd, char **buffer, char **save)
 {
-	int count;
-	char *aux_swap;
+	int		count;
+	char	*aux_swap;
 
 	if (ft_strchr(*save, '\n'))
 		return (extract_line(save));
@@ -62,10 +62,10 @@ char *get_line(int fd, char **buffer, char **save)
 	return (NULL);
 }
 
-int do_read(int fd, char **buffer, char **save)
+int	do_read(int fd, char **buffer, char **save)
 {
-	int count;
-	char *aux_swap;
+	int		count;
+	char	*aux_swap;
 
 	count = 1;
 	while (!ft_strchr(*save, '\n') && count)
@@ -81,11 +81,11 @@ int do_read(int fd, char **buffer, char **save)
 	return (count);
 }
 
-char *extract_line(char **save)
+char	*extract_line(char **save)
 {
-	char *line;
-	char *aux;
-	int i;
+	char	*line;
+	char	*aux;
+	int		i;
 
 	i = 0;
 	while ((*save)[i] != '\n' && (*save)[i] != '\0')

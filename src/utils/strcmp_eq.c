@@ -22,9 +22,9 @@
 **	RETURN VALUES
 **	Return 1 if strings are equal and 0 if it's different.
 */
-int strcmp_eq(char *s1, char *s2)
+int	strcmp_eq(char *s1, char *s2)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!s1 || !s2)

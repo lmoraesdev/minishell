@@ -22,11 +22,10 @@
 		**	RETURN VALUES
 		**	Return allocated memory from new string
 		*/
-		char *
-		remove_spaces_around_str(char *str)
+char	*remove_spaces_around_str(char *str)
 {
-	char *new_str;
-	int str_len;
+	char		*new_str;
+	int			str_len;
 
 	if (!str)
 		return (NULL);

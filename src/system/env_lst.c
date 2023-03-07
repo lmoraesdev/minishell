@@ -27,8 +27,8 @@
 */
 int	env_lst_add_back(t_env **head_env, char *name, char *value)
 {
-	t_env *new_node;
-	t_env *temp;
+	t_env	*new_node;
+	t_env	*temp;
 
 	if (!name)
 		return (EXIT_FAILURE);
@@ -62,12 +62,12 @@ int	env_lst_add_back(t_env **head_env, char *name, char *value)
 void	free_env_lst(t_env **head_env)
 {
 	if (*head_env == NULL)
-		return;
+		return ;
 	while (*head_env != NULL)
 	{
 		del_first_node(head_env);
 	}
-	*head_env = NULL;
+	*head_env = NULL ;
 }
 
 /*	DEL_FIRST_NODE

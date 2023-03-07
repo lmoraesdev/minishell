@@ -21,7 +21,7 @@
 **	RETURN VALUES
 **	-
 */
-void clear_minishell(void)
+void	clear_minishell(void)
 {
 	if (g_data.cmd_line != NULL)
 	{
