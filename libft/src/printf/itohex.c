@@ -6,18 +6,16 @@
 /*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 13:12:39 by lbatista          #+#    #+#             */
-/*   Updated: 2023/02/22 13:12:41 by lbatista         ###   ########.fr       */
+/*   Updated: 2023/03/14 20:39:51 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char *n_convert(char *str,
-											 size_t size,
-											 unsigned long int num,
-											 const char format)
+static char	*n_convert(char *str, size_t size, unsigned long int num,
+	const char format)
 {
-	int result;
+	int	result;
 
 	str[size] = '\0';
 	while (size--)
@@ -34,9 +32,9 @@ static char *n_convert(char *str,
 	return (str);
 }
 
-static size_t nb_size(unsigned long int num)
+static size_t	nb_size(unsigned long int num)
 {
-	size_t len;
+	size_t	len;
 
 	len = 1;
 	num /= 16;
@@ -48,10 +46,10 @@ static size_t nb_size(unsigned long int num)
 	return (len);
 }
 
-int itohex(unsigned long int n, const char format)
+int	itohex(unsigned long int n, const char format)
 {
-	size_t n_digits;
-	char *str;
+	size_t	n_digits;
+	char	*str;
 
 	n_digits = nb_size(n);
 	str = malloc(sizeof(char) * (n_digits + 1));

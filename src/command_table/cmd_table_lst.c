@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   cmd_table_lst.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mvavasso <mvavasso@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lbatista <lbatista@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/22 11:33:52 by lbatista          #+#    #+#             */
-/*   Updated: 2023/03/07 01:39:27 by mvavasso         ###   ########.fr       */
+/*   Updated: 2023/03/14 20:41:11 by lbatista         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ void	free_cmd_lst(t_cmdtable **head_cmd)
 **	RETURN VALUES
 **	-
 */
-void	cmd_lst_add_front(t_cmdtable **head_cmd, t_cmd_value cmd_v) 
+void	cmd_lst_add_front(t_cmdtable **head_cmd, t_cmd_value cmd_v)
 {
 	t_cmdtable	*ptr;
 	t_cmdtable	*temp;
